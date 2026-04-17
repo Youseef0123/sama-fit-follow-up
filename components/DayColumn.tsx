@@ -6,7 +6,11 @@ interface DayColumnProps {
   dayKey: DayKey;
   dayLabel: string;
   dayData: MealDay;
-  onChange: (dayKey: DayKey, field: keyof MealDay, value: unknown) => void;
+  onChange: (
+    dayKey: DayKey,
+    field: keyof MealDay,
+    value: MealDay[keyof MealDay],
+  ) => void;
 }
 
 const FIELD_STYLES =

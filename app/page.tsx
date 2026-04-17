@@ -10,14 +10,32 @@ import { generateWeekId, getNextSaturday } from "@/lib/utils";
 export default function Home() {
   const router = useRouter();
   const [weeks, setWeeks] = useState<Week[]>([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    setWeeks(getAllWeeks());
+    let mounted = true;
+
+    getAllWeeks()
+      .then((data) => {
+        if (!mounted) {
+          return;
+        }
+        setWeeks(data);
+      })
+      .finally(() => {
+        if (mounted) {
+          setLoading(false);
+        }
+      });
+
+    return () => {
+      mounted = false;
+    };
   }, []);
 
   const hasWeeks = weeks.length > 0;
 
-  const handleCreateWeek = () => {
+  const handleCreateWeek = async () => {
     const nextSaturday = getNextSaturday(new Date());
     const nextId = generateWeekId(nextSaturday);
     const existing = weeks.find((week) => week.id === nextId);
@@ -28,10 +46,21 @@ export default function Home() {
     }
 
     const week = createNewWeek(nextSaturday);
-    saveWeek(week);
-    setWeeks(getAllWeeks());
+    await saveWeek(week);
+    setWeeks((prev) =>
+      [week, ...prev].sort((a, b) => (a.startDate < b.startDate ? 1 : -1)),
+    );
     router.push(`/week/${week.id}`);
   };
+
+  if (loading) {
+    return (
+      <div className="flex min-h-screen flex-col items-center justify-center gap-3">
+        <div className="h-6 w-6 animate-spin rounded-full border-2 border-[#1E3A5F] border-t-transparent" />
+        <div className="text-sm text-[#64748B]">جارٍ تحميل البيانات...</div>
+      </div>
+    );
+  }
 
   return (
     <main className="relative flex min-h-screen items-center justify-center px-4 py-14 md:px-8">

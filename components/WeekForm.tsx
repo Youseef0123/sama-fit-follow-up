@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 import BottomRow from "@/components/BottomRow";
 import DayColumn from "@/components/DayColumn";
@@ -27,14 +27,38 @@ export default function WeekForm({ id }: WeekFormProps) {
   const router = useRouter();
   const [week, setWeek] = useState<Week | null>(null);
   const [activeDay, setActiveDay] = useState<DayKey>("saturday");
+  const [loading, setLoading] = useState(true);
+  const [saveStatus, setSaveStatus] = useState<"saved" | "saving" | "idle">(
+    "idle",
+  );
+  const isInitialLoadRef = useRef(true);
+  const saveStatusTimerRef = useRef<number | null>(null);
 
   useEffect(() => {
-    const foundWeek = getWeekById(id);
-    if (!foundWeek) {
-      router.replace("/");
-      return;
-    }
-    setWeek(foundWeek);
+    let mounted = true;
+
+    getWeekById(id)
+      .then((foundWeek) => {
+        if (!mounted) {
+          return;
+        }
+
+        if (!foundWeek) {
+          router.replace("/");
+          return;
+        }
+
+        setWeek(foundWeek);
+      })
+      .finally(() => {
+        if (mounted) {
+          setLoading(false);
+        }
+      });
+
+    return () => {
+      mounted = false;
+    };
   }, [id, router]);
 
   useEffect(() => {
@@ -42,12 +66,38 @@ export default function WeekForm({ id }: WeekFormProps) {
       return;
     }
 
+    if (isInitialLoadRef.current) {
+      isInitialLoadRef.current = false;
+      return;
+    }
+
     const timer = window.setTimeout(() => {
-      saveWeek(week);
+      setSaveStatus("saving");
+      void saveWeek(week)
+        .then(() => {
+          setSaveStatus("saved");
+          if (saveStatusTimerRef.current) {
+            window.clearTimeout(saveStatusTimerRef.current);
+          }
+          saveStatusTimerRef.current = window.setTimeout(() => {
+            setSaveStatus("idle");
+          }, 2000);
+        })
+        .catch(() => {
+          setSaveStatus("idle");
+        });
     }, 300);
 
     return () => window.clearTimeout(timer);
   }, [week]);
+
+  useEffect(() => {
+    return () => {
+      if (saveStatusTimerRef.current) {
+        window.clearTimeout(saveStatusTimerRef.current);
+      }
+    };
+  }, []);
 
   const weekRange = useMemo(() => {
     if (!week) {
@@ -115,9 +165,31 @@ export default function WeekForm({ id }: WeekFormProps) {
     });
   };
 
-  if (!week) {
-    return null;
+  if (loading || !week) {
+    if (!loading && !week) {
+      return null;
+    }
+
+    return (
+      <div className="flex min-h-screen flex-col items-center justify-center gap-3">
+        <div className="h-6 w-6 animate-spin rounded-full border-2 border-[#1E3A5F] border-t-transparent" />
+        <div className="text-sm text-[#64748B]">جارٍ تحميل البيانات...</div>
+      </div>
+    );
   }
+
+  const saveStatusNode =
+    saveStatus === "saving" ? (
+      <div className="flex items-center gap-2 text-xs font-bold text-[--color-highlight]">
+        <span className="h-2 w-2 rounded-full bg-[--color-highlight]" />
+        <span>جارٍ الحفظ...</span>
+      </div>
+    ) : saveStatus === "saved" ? (
+      <div className="flex items-center gap-2 text-xs font-bold text-emerald-600">
+        <span className="h-2 w-2 rounded-full bg-emerald-600" />
+        <span>تم الحفظ ✓</span>
+      </div>
+    ) : null;
 
   const activeDayMeta = DAYS.find((item) => item.key === activeDay) ?? DAYS[0];
 
@@ -137,8 +209,11 @@ export default function WeekForm({ id }: WeekFormProps) {
           تقرير الوجبات الأسبوعي
         </div>
 
-        <div className="text-sm font-bold text-[--color-primary]">
-          {weekRange}
+        <div className="text-left">
+          <div className="text-sm font-bold text-[--color-primary]">
+            {weekRange}
+          </div>
+          {saveStatusNode}
         </div>
       </header>
 

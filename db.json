@@ -1,0 +1,109 @@
+{
+  "weeks": [
+    {
+      "id": "week_2026-04-17",
+      "startDate": "2026-04-17T22:00:00.000Z",
+      "endDate": "2026-04-23T22:00:00.000Z",
+      "days": {
+        "saturday": {
+          "breakfast": true,
+          "lunch": true,
+          "dinner": true,
+          "snack": false,
+          "preWorkout": true,
+          "postWorkout": true,
+          "water": "23",
+          "sleepHours": "8",
+          "vitamins": true
+        },
+        "sunday": {
+          "breakfast": false,
+          "lunch": false,
+          "dinner": false,
+          "snack": false,
+          "preWorkout": false,
+          "postWorkout": false,
+          "water": "",
+          "sleepHours": "",
+          "vitamins": false
+        },
+        "monday": {
+          "breakfast": false,
+          "lunch": false,
+          "dinner": false,
+          "snack": false,
+          "preWorkout": false,
+          "postWorkout": false,
+          "water": "",
+          "sleepHours": "",
+          "vitamins": false
+        },
+        "tuesday": {
+          "breakfast": false,
+          "lunch": false,
+          "dinner": false,
+          "snack": false,
+          "preWorkout": false,
+          "postWorkout": false,
+          "water": "",
+          "sleepHours": "",
+          "vitamins": false
+        },
+        "wednesday": {
+          "breakfast": false,
+          "lunch": false,
+          "dinner": false,
+          "snack": false,
+          "preWorkout": false,
+          "postWorkout": false,
+          "water": "",
+          "sleepHours": "",
+          "vitamins": false
+        },
+        "thursday": {
+          "breakfast": false,
+          "lunch": false,
+          "dinner": false,
+          "snack": false,
+          "preWorkout": false,
+          "postWorkout": false,
+          "water": "",
+          "sleepHours": "",
+          "vitamins": false
+        },
+        "friday": {
+          "breakfast": false,
+          "lunch": false,
+          "dinner": false,
+          "snack": false,
+          "preWorkout": false,
+          "postWorkout": false,
+          "water": "",
+          "sleepHours": "",
+          "vitamins": false
+        }
+      },
+      "workoutSessions": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "cardioSessions": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "notes": ""
+    }
+  ]
+}

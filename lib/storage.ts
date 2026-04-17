@@ -1,17 +1,16 @@
+import { fetchData, saveData } from "./api";
 import { Week } from "./types";
 import { DAY_KEYS, createEmptyDay, generateWeekId } from "./utils";
-
-export const STORAGE_KEY = "samafit_weeks";
-
-function isClient(): boolean {
-  return typeof window !== "undefined";
-}
 
 function toBoolean(value: unknown): boolean {
   return value === true || value === "true";
 }
 
-function normalizeWeeks(rawWeeks: unknown[]): Week[] {
+function normalizeWeeks(rawWeeks: unknown): Week[] {
+  if (!Array.isArray(rawWeeks)) {
+    return [];
+  }
+
   return rawWeeks.map((week) => {
     const typedWeek = week as Partial<Week>;
 
@@ -65,34 +64,17 @@ function normalizeWeeks(rawWeeks: unknown[]): Week[] {
   });
 }
 
-export function getAllWeeks(): Week[] {
-  if (!isClient()) {
-    return [];
-  }
-
+export async function getAllWeeks(): Promise<Week[]> {
   try {
-    const raw = window.localStorage.getItem(STORAGE_KEY);
-    if (!raw) {
-      return [];
-    }
-
-    const parsed = JSON.parse(raw);
-    if (!Array.isArray(parsed)) {
-      return [];
-    }
-
-    return normalizeWeeks(parsed);
+    const data = await fetchData();
+    return normalizeWeeks(data.weeks);
   } catch {
     return [];
   }
 }
 
-export function saveWeek(week: Week): void {
-  if (!isClient()) {
-    return;
-  }
-
-  const weeks = getAllWeeks();
+export async function saveWeek(week: Week): Promise<void> {
+  const weeks = await getAllWeeks();
   const index = weeks.findIndex((item) => item.id === week.id);
 
   if (index === -1) {
@@ -102,11 +84,12 @@ export function saveWeek(week: Week): void {
   }
 
   weeks.sort((a, b) => (a.startDate < b.startDate ? 1 : -1));
-  window.localStorage.setItem(STORAGE_KEY, JSON.stringify(weeks));
+  await saveData({ weeks });
 }
 
-export function getWeekById(id: string): Week | null {
-  const week = getAllWeeks().find((item) => item.id === id);
+export async function getWeekById(id: string): Promise<Week | null> {
+  const weeks = await getAllWeeks();
+  const week = weeks.find((item) => item.id === id);
   return week ?? null;
 }
 

@@ -243,10 +243,7 @@ export default function WeekForm({ id }: WeekFormProps) {
         </div>
       </section>
 
-      <BottomRow
-        notes={week.notes}
-        onChange={handleNotesChange}
-      />
+      <BottomRow notes={week.notes} onChange={handleNotesChange} />
 
       <footer className="mt-6 flex items-center justify-end gap-2 pb-4 text-left text-sm font-extrabold italic text-[--color-highlight]">
         <svg viewBox="0 0 32 32" className="h-5 w-5 fill-current" aria-hidden>

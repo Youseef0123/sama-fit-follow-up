@@ -10,7 +10,7 @@
           "lunch": false,
           "dinner": false,
           "snack": false,
-          "preWorkout": false,
+          "preWorkout": true,
           "postWorkout": false,
           "water": "",
           "sleepHours": "",

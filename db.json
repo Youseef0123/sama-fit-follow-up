@@ -84,7 +84,7 @@
         }
       },
       "workoutSessions": [
-        false,
+        true,
         false,
         false,
         false,
@@ -94,7 +94,7 @@
         false
       ],
       "cardioSessions": [
-        false,
+        true,
         false,
         false,
         false,

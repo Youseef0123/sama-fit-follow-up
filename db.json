@@ -7,14 +7,14 @@
       "days": {
         "saturday": {
           "breakfast": true,
-          "lunch": true,
-          "dinner": true,
+          "lunch": false,
+          "dinner": false,
           "snack": false,
-          "preWorkout": true,
-          "postWorkout": true,
-          "water": "23",
-          "sleepHours": "8",
-          "vitamins": true
+          "preWorkout": false,
+          "postWorkout": false,
+          "water": "",
+          "sleepHours": "",
+          "vitamins": false
         },
         "sunday": {
           "breakfast": false,
@@ -72,15 +72,15 @@
           "vitamins": false
         },
         "friday": {
-          "breakfast": false,
-          "lunch": false,
-          "dinner": false,
+          "breakfast": true,
+          "lunch": true,
+          "dinner": true,
           "snack": false,
-          "preWorkout": false,
-          "postWorkout": false,
-          "water": "",
-          "sleepHours": "",
-          "vitamins": false
+          "preWorkout": true,
+          "postWorkout": true,
+          "water": "3.5",
+          "sleepHours": "8",
+          "vitamins": true
         }
       },
       "workoutSessions": [

@@ -17,15 +17,15 @@
           "vitamins": true
         },
         "sunday": {
-          "breakfast": false,
-          "lunch": false,
+          "breakfast": true,
+          "lunch": true,
           "dinner": false,
-          "snack": false,
-          "preWorkout": false,
-          "postWorkout": false,
-          "water": "",
-          "sleepHours": "",
-          "vitamins": false
+          "snack": true,
+          "preWorkout": true,
+          "postWorkout": true,
+          "water": "3",
+          "sleepHours": "7",
+          "vitamins": true
         },
         "monday": {
           "breakfast": false,
@@ -86,7 +86,7 @@
       "workoutSessions": [
         true,
         true,
-        false,
+        true,
         false,
         false,
         false,
@@ -96,7 +96,7 @@
       "cardioSessions": [
         true,
         true,
-        false,
+        true,
         false,
         false,
         false,

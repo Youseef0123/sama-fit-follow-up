@@ -7,14 +7,14 @@
       "days": {
         "saturday": {
           "breakfast": true,
-          "lunch": false,
-          "dinner": false,
-          "snack": false,
+          "lunch": true,
+          "dinner": true,
+          "snack": true,
           "preWorkout": true,
-          "postWorkout": false,
-          "water": "",
-          "sleepHours": "",
-          "vitamins": false
+          "postWorkout": true,
+          "water": "3",
+          "sleepHours": "8.5",
+          "vitamins": true
         },
         "sunday": {
           "breakfast": false,
@@ -85,7 +85,7 @@
       },
       "workoutSessions": [
         true,
-        false,
+        true,
         false,
         false,
         false,
@@ -95,7 +95,7 @@
       ],
       "cardioSessions": [
         true,
-        false,
+        true,
         false,
         false,
         false,

@@ -28,15 +28,15 @@
           "vitamins": true
         },
         "monday": {
-          "breakfast": false,
-          "lunch": false,
-          "dinner": false,
-          "snack": false,
-          "preWorkout": false,
-          "postWorkout": false,
-          "water": "",
-          "sleepHours": "",
-          "vitamins": false
+          "breakfast": true,
+          "lunch": true,
+          "dinner": true,
+          "snack": true,
+          "preWorkout": true,
+          "postWorkout": true,
+          "water": "3",
+          "sleepHours": "6",
+          "vitamins": true
         },
         "tuesday": {
           "breakfast": false,

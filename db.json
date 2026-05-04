@@ -17,18 +17,18 @@
           "vitamins": true
         },
         "sunday": {
-          "breakfast": false,
-          "lunch": false,
-          "dinner": false,
-          "snack": false,
-          "preWorkout": false,
-          "postWorkout": false,
-          "water": "",
-          "sleepHours": "",
+          "breakfast": true,
+          "lunch": true,
+          "dinner": true,
+          "snack": true,
+          "preWorkout": true,
+          "postWorkout": true,
+          "water": "2.5",
+          "sleepHours": "6.5",
           "vitamins": false
         },
         "monday": {
-          "breakfast": false,
+          "breakfast": true,
           "lunch": false,
           "dinner": false,
           "snack": false,
@@ -85,7 +85,7 @@
       },
       "workoutSessions": [
         true,
-        false,
+        true,
         false,
         false,
         false,
@@ -125,7 +125,7 @@
           "breakfast": true,
           "lunch": true,
           "dinner": false,
-          "snack": true,
+          "snack": false,
           "preWorkout": true,
           "postWorkout": true,
           "water": "3",
@@ -147,7 +147,7 @@
           "breakfast": true,
           "lunch": true,
           "dinner": true,
-          "snack": true,
+          "snack": false,
           "preWorkout": true,
           "postWorkout": true,
           "water": "2.5",
@@ -162,14 +162,14 @@
           "preWorkout": true,
           "postWorkout": true,
           "water": "3",
-          "sleepHours": "8",
+          "sleepHours": "7",
           "vitamins": true
         },
         "thursday": {
           "breakfast": true,
           "lunch": true,
           "dinner": true,
-          "snack": true,
+          "snack": false,
           "preWorkout": true,
           "postWorkout": true,
           "water": "3",
@@ -180,11 +180,11 @@
           "breakfast": true,
           "lunch": true,
           "dinner": true,
-          "snack": false,
+          "snack": true,
           "preWorkout": true,
           "postWorkout": true,
           "water": "3.5",
-          "sleepHours": "8",
+          "sleepHours": "7",
           "vitamins": true
         }
       },
@@ -208,7 +208,7 @@
         false,
         false
       ],
-      "notes": ""
+      "notes": "مش ديما باخد الاسناك عشان ببقي يعتبر لسه واكل وكده "
     }
   ]
 }

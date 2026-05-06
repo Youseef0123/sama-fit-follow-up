@@ -25,40 +25,40 @@
           "postWorkout": true,
           "water": "2.5",
           "sleepHours": "6.5",
-          "vitamins": false
+          "vitamins": true
         },
         "monday": {
           "breakfast": true,
-          "lunch": false,
-          "dinner": false,
-          "snack": false,
-          "preWorkout": false,
-          "postWorkout": false,
-          "water": "",
-          "sleepHours": "",
-          "vitamins": false
+          "lunch": true,
+          "dinner": true,
+          "snack": true,
+          "preWorkout": true,
+          "postWorkout": true,
+          "water": "2",
+          "sleepHours": "7",
+          "vitamins": true
         },
         "tuesday": {
-          "breakfast": false,
-          "lunch": false,
-          "dinner": false,
+          "breakfast": true,
+          "lunch": true,
+          "dinner": true,
           "snack": false,
-          "preWorkout": false,
-          "postWorkout": false,
-          "water": "",
-          "sleepHours": "",
-          "vitamins": false
+          "preWorkout": true,
+          "postWorkout": true,
+          "water": "3",
+          "sleepHours": "8",
+          "vitamins": true
         },
         "wednesday": {
-          "breakfast": false,
-          "lunch": false,
-          "dinner": false,
-          "snack": false,
-          "preWorkout": false,
-          "postWorkout": false,
-          "water": "",
-          "sleepHours": "",
-          "vitamins": false
+          "breakfast": true,
+          "lunch": true,
+          "dinner": true,
+          "snack": true,
+          "preWorkout": true,
+          "postWorkout": true,
+          "water": "3",
+          "sleepHours": "8",
+          "vitamins": true
         },
         "thursday": {
           "breakfast": false,
@@ -86,7 +86,7 @@
       "workoutSessions": [
         true,
         true,
-        false,
+        true,
         false,
         false,
         false,
@@ -95,7 +95,7 @@
       ],
       "cardioSessions": [
         true,
-        false,
+        true,
         false,
         false,
         false,

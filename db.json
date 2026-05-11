@@ -22,21 +22,21 @@
           "dinner": true,
           "snack": true,
           "preWorkout": true,
-          "postWorkout": false,
+          "postWorkout": true,
           "water": "4",
           "sleepHours": "7",
           "vitamins": true
         },
         "monday": {
-          "breakfast": false,
-          "lunch": false,
-          "dinner": false,
-          "snack": false,
-          "preWorkout": false,
-          "postWorkout": false,
-          "water": "",
-          "sleepHours": "",
-          "vitamins": false
+          "breakfast": true,
+          "lunch": true,
+          "dinner": true,
+          "snack": true,
+          "preWorkout": true,
+          "postWorkout": true,
+          "water": "3",
+          "sleepHours": "8",
+          "vitamins": true
         },
         "tuesday": {
           "breakfast": false,
@@ -103,7 +103,7 @@
         false,
         false
       ],
-      "notes": "السبت كان تمام\nوالاحد كان تمام\n\n"
+      "notes": "السبت هو اللي مكلتش فيه وجبه العشا والاسناك ويوم الخميس اللي قبله زي ماذكرت في الشات بتاع التيليجرام ده انا اللي خدت فيه الوجبه الفري ويوم الجمعه ده انا معرفتش اخد وجبه بعد التمرين بسبب كان عندي كذا مناسبه \nوالاحد كان تمام\nوالاتنين كان تمام \n\n"
     },
     {
       "id": "week_2026-05-01",
@@ -166,12 +166,12 @@
           "vitamins": true
         },
         "thursday": {
-          "breakfast": false,
-          "lunch": false,
-          "dinner": false,
-          "snack": false,
-          "preWorkout": false,
-          "postWorkout": false,
+          "breakfast": true,
+          "lunch": true,
+          "dinner": true,
+          "snack": true,
+          "preWorkout": true,
+          "postWorkout": true,
           "water": "",
           "sleepHours": "",
           "vitamins": false
@@ -192,7 +192,7 @@
         true,
         true,
         true,
-        false,
+        true,
         false,
         false,
         false,
@@ -201,7 +201,7 @@
       "cardioSessions": [
         true,
         true,
-        false,
+        true,
         false,
         false,
         false,

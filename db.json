@@ -23,17 +23,17 @@
           "snack": true,
           "preWorkout": true,
           "postWorkout": true,
-          "water": "",
-          "sleepHours": "",
-          "vitamins": false
+          "water": "4",
+          "sleepHours": "8",
+          "vitamins": true
         },
         "monday": {
-          "breakfast": false,
-          "lunch": false,
-          "dinner": false,
+          "breakfast": true,
+          "lunch": true,
+          "dinner": true,
           "snack": false,
           "preWorkout": false,
-          "postWorkout": false,
+          "postWorkout": true,
           "water": "",
           "sleepHours": "",
           "vitamins": false
@@ -122,23 +122,23 @@
           "vitamins": true
         },
         "sunday": {
-          "breakfast": false,
-          "lunch": false,
-          "dinner": false,
-          "snack": false,
-          "preWorkout": false,
-          "postWorkout": false,
-          "water": "",
-          "sleepHours": "",
-          "vitamins": false
+          "breakfast": true,
+          "lunch": true,
+          "dinner": true,
+          "snack": true,
+          "preWorkout": true,
+          "postWorkout": true,
+          "water": "4",
+          "sleepHours": "8",
+          "vitamins": true
         },
         "monday": {
-          "breakfast": false,
-          "lunch": false,
-          "dinner": false,
+          "breakfast": true,
+          "lunch": true,
+          "dinner": true,
           "snack": false,
-          "preWorkout": false,
-          "postWorkout": false,
+          "preWorkout": true,
+          "postWorkout": true,
           "water": "",
           "sleepHours": "",
           "vitamins": false
@@ -189,7 +189,7 @@
         }
       },
       "workoutSessions": [
-        true,
+        false,
         false,
         false,
         false,
@@ -199,7 +199,7 @@
         false
       ],
       "cardioSessions": [
-        true,
+        false,
         false,
         false,
         false,
@@ -293,26 +293,6 @@
           "vitamins": true
         }
       },
-      "workoutSessions": [
-        true,
-        true,
-        true,
-        true,
-        false,
-        false,
-        false,
-        false
-      ],
-      "cardioSessions": [
-        true,
-        true,
-        true,
-        false,
-        false,
-        false,
-        false,
-        false
-      ],
       "workoutSessions": [
         true,
         true,
@@ -438,26 +418,6 @@
         false,
         false
       ],
-      "workoutSessions": [
-        true,
-        true,
-        true,
-        true,
-        false,
-        false,
-        false,
-        false
-      ],
-      "cardioSessions": [
-        true,
-        true,
-        true,
-        false,
-        false,
-        false,
-        false,
-        false
-      ],
       "notes": ""
     },
     {
@@ -543,26 +503,6 @@
           "vitamins": true
         }
       },
-      "workoutSessions": [
-        true,
-        true,
-        true,
-        true,
-        true,
-        false,
-        false,
-        false
-      ],
-      "cardioSessions": [
-        true,
-        true,
-        true,
-        false,
-        false,
-        false,
-        false,
-        false
-      ],
       "workoutSessions": [
         true,
         true,

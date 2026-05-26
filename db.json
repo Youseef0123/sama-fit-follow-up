@@ -106,9 +106,9 @@
       "notes": ""
     },
     {
-      "id": "week_2026-05-15",
-      "startDate": "2026-05-15T21:00:00.000Z",
-      "endDate": "2026-05-21T21:00:00.000Z",
+      "id": "week_2026-05-29",
+      "startDate": "2026-05-29T21:00:00.000Z",
+      "endDate": "2026-06-04T21:00:00.000Z",
       "days": {
         "saturday": {
           "breakfast": true,
@@ -118,7 +118,7 @@
           "preWorkout": true,
           "postWorkout": true,
           "water": "3",
-          "sleepHours": "7.5",
+          "sleepHours": "7",
           "vitamins": true
         },
         "sunday": {
@@ -313,6 +313,26 @@
         false,
         false
       ],
+      "workoutSessions": [
+        true,
+        true,
+        true,
+        true,
+        false,
+        false,
+        false,
+        false
+      ],
+      "cardioSessions": [
+        true,
+        true,
+        true,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
       "notes": "السبت هو اللي مكلتش فيه وجبه العشا والاسناك ويوم الخميس اللي قبله زي ماذكرت في الشات بتاع التيليجرام ده انا اللي خدت فيه الوجبه الفري ويوم الجمعه ده انا معرفتش اخد وجبه بعد التمرين بسبب كان عندي كذا مناسبه \nوالاحد كان تمام\nوالاتنين كان تمام \n\n"
     },
     {
@@ -418,6 +438,26 @@
         false,
         false
       ],
+      "workoutSessions": [
+        true,
+        true,
+        true,
+        true,
+        false,
+        false,
+        false,
+        false
+      ],
+      "cardioSessions": [
+        true,
+        true,
+        true,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
       "notes": ""
     },
     {
@@ -503,6 +543,26 @@
           "vitamins": true
         }
       },
+      "workoutSessions": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        false,
+        false,
+        false
+      ],
+      "cardioSessions": [
+        true,
+        true,
+        true,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
       "workoutSessions": [
         true,
         true,
